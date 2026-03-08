@@ -1,0 +1,17 @@
+# Project Name
+spring.application.name=expense-tracker
+
+# MySQL Database Connection
+# 'expense_db' nu database neenga munnadiye create pannitinga
+spring.datasource.url=jdbc:mysql://localhost:3306/expense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+
+# Database Credentials
+spring.datasource.username=root
+# Password illathala empty-ah vittutaen Priya
+spring.datasource.password=
+
+# Hibernate Properties
+# Idhu thaan automatic-ah table-ai create pannum
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect

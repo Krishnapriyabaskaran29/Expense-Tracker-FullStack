@@ -1,0 +1,127 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* 1. THE SHINING WAVY BACKGROUND logic */
+    /* Multicolored Gradient with moving angles */
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #2c3c40, #9d50bb);
+    background-size: 400% 400%;
+    
+    /* 2. THE ANIMATION that makes it "Shine" and "Wave" */
+    animation: shiningWavy 10s ease infinite;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Keyframes for the background movement */
+@keyframes shiningWavy {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 900px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 0 15px #00d2ff;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+#expense-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #00d2ff;
+    box-shadow: 0 0 10px #00d2ff;
+}
+
+button {
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.4);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    color: #00d2ff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+#summary {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+#total {
+    color: #00d2ff;
+}
+
+/* Row Delete Animation */
+.fade-out {
+    animation: slideOut 0.6s forwards;
+}
+
+@keyframes slideOut {
+    to { transform: translateX(100%); opacity: 0; }
+}

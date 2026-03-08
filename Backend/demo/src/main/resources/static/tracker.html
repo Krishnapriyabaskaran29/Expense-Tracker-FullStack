@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Expense Tracker</title>
+    <link rel="stylesheet" href="tracker.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header><h1>✨ Modern Expense Tracker</h1></header>
+        <form id="expense-form">
+            <input type="date" id="date" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <input type="text" id="description" placeholder="Description">
+            <button type="submit">Add Expense</button>
+        </form>
+        <table id="expense-table">
+            <thead>
+                <tr><th>Date</th><th>Category</th><th>Amount</th><th>Description</th><th>Action</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="summary">Total Expenses: ₹ <span id="total">0</span></div>
+    </div>
+    <script src="tracker.js"></script>
+</body>
+</html>
